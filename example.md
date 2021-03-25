@@ -6,7 +6,7 @@
   - [Send transaction](#send-transaction)
   - [Check transaction](#check-transaction)
   - [Check transaction status](#check-transaction-status)
-- [Create new HD account](##create-a-new-hd-account-for-each-user-instead-of-using-message)
+- [Create new HD account](#create-a-new-hd-account-for-each-user-instead-of-using-message)
 - [Check balance](#check-balance)
 - Multisig
   - [Create Multisig Account](#create-multisig-account)
