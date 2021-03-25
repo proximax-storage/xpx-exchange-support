@@ -750,7 +750,7 @@ It also have websocket connection.
 
 **Please remember to close the websocket connection when it is no longer in use, it is to release resources for both the client and server
 
-### List of Mainnet API
+### List of Mainnet API Endpoints
 
 - arcturus.xpxsirius.io
 - aldebaran.xpxsirius.io
@@ -759,7 +759,7 @@ It also have websocket connection.
 - delphinus.xpxsirius.io
 - lyrasithara.xpxsirius.io
 
-### List of Testnet API
+### List of Testnet API Endpoints
 
 - bctestnet1.brimstone.xpxsirius.io
 - bctestnet2.brimstone.xpxsirius.io
