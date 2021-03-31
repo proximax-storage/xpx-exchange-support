@@ -1,41 +1,46 @@
-## XPX Exchange Support
+## XPX Exchange Integration
 
-This document serves as a guide for Exchanges to list XPX and the designs listed are common among many exchanges but I would like to invite exchanges to contribute to this document should there be a better design.
+This document serves as a guide for exchanges to list XPX and other tokens (Mosaics) created on the ProximaX Sirius platform. The exchange integration designs in this document are those commonly used by exchanges. We nonetheless invite public contributors to improve this document where needed.  
 
-**_Also, it is strongly encouraged that Exchanges do not enable harvesting and most of the Exchanges has agreed to this in the spirit of community_**
+Following respective listing agreements, exchanges must not use exchange funds to set up nodes on the ProximaX Sirius platform to validate transactions and earn fees.
 
 ### Central Wallet Design
 
-- All deposits and withdrawals happen in a central wallet.
-- Using the Message feature in Sirius Chain, users are identified by their UID on the Exchange’s own database. The UID is only shown to the user’s dashboard during the deposit confirmation.
-- Exchange should have the central wallet and it is recommended to have it set up with the Multisig feature in Sirius Chain. In addition, it is advised to have a cold wallet to hold a certain threshold for the pool of XPXs.
-- With the Multisig feature in Sirius Chain, withdrawals can be automated using bots communicating with different nodes to ensure proper security with user 2FA.
-- Drawback to this design is that many users are not accustomed to having a Message attached to their transactions which may cost the exchange lots of tickets in their support.
+- All deposits and withdrawals occur via a central wallet.
+
+- Using the Sirius Chain message feature, users are identified by their unique identifier (“UID”) on an exchange’s database. The UID is only shown in the user’s dashboard during the deposit confirmation.
+
+- Exchanges should use a central wallet. It is highly recommended to set up the wallet with Sirius Chains’s multisig feature to protect users’ funds from internal compromises and external hacks. Also, it is advised to have a cold wallet to hold a certain threshold for the pool of XPXs.
+
+- With the multisig feature in Sirius Chain, withdrawals can be automated using bots communicating with different nodes to ensure proper security combined with users’ 2FA.
+
 - This design is shown below:
-  - Black lines represent the deposits
-  - Green lines represent the withdrawals
-  - Red lines represent co-signing bots
+  - Black lines represent the deposits.
+  - Green lines represent the withdrawals.
+  - Red lines represent co-signing bots.
 
 ![Image of Central Wallet Design](images/ProximaX-Diagram-Isometric-Central-Wallet.jpg)
 
 ### Multi-wallet Design
 
 - All user accounts on the exchange have their own independent Sirius Chain address.
-- The Sirius Chain address private keys are managed by the exchange through their own security measures.
-- Deposits all happen directly with the Sirius Chain address of the user’s wallet, however the funds are transferred automatically to a central wallet which is used for withdrawals. This central wallet should follow the above design in ensuring proper security, i.e. using a cold wallet and the Multisig feature of Sirius Chain.
-- Drawback to this design is that exchange will need to ensure strong security to protect the private keys from being compromised.
+
+- The Sirius Chain address private keys are managed by the exchange through its own security measures.
+
+- Deposits all happen directly with the Sirius Chain address of the user’s wallet. However, the funds are transferred automatically to a central wallet which is used for withdrawals. This central wallet should follow the below design to ensure proper security, i.e., using a cold wallet and the multisig feature.
+
+- The exchange will need to use strong security measures to protect the private keys from being compromised.
+
 - This design is shown below:
-  - Black lines represent the deposits
-  - Green lines represent the withdrawals
-  - Red lines represent co-signing bots
+  - Black lines represent the deposits.
+  - Green lines represent the withdrawals.
+  - Red lines represent co-signing bots.
 
 ![Image of Multi-wallet Design](images/ProximaX-Diagram-Isometric-Multiwallet.jpg)
 
 ### Deposits
 
-One of the unique features of Sirius Chain is that XPX is one of the mosaic that get transfered in Transfer Transaction.
-
-On listening to incoming deposits, it is also important to take note of the various transaction types to ensure proper update of the user’s dashboard, and it is advisable to always wait for about 3 blocks confirmation before crediting the values to the user’s dashboard. The flow to handle the various transaction and determining the exact amount of XPXs deposit is shown below. This flow also ensures that the exchange system will support any Mosaics built on Sirius Chain, which allows a user to send 1 transaction but deposit up to a maximum of 10 Mosaics. However, the actual listing of the Mosaics will depend very much on the exchange and the Mosaic owner.
+On listening to incoming deposits, it is important to note the various transaction types to ensure proper update of the user’s dashboard.  It is advisable to always wait for about three block confirmations before crediting the values to the user’s dashboard. The flow to handle the various transactions and determining the exact amount of XPXs deposited is shown below. This flow also ensures that an exchange’s system will support the listing of any tokens created on Sirius Chain. However, the actual listing of a token (Mosaic) will depend on the exchange and the token owner.
 
 ![Image of Deposit flowchart](images/ProximaX-Flow-Deposits.jpg)
 
