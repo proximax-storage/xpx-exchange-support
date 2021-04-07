@@ -16,8 +16,8 @@
   - [View Multisig](#view-multisig)
   - [View Multisig Graph](#view-multisig-graph)
 - [API Endpoints](#api-endpoints)
-  - [List of Mainnet API](#list-of-mainnet-api-endpoints)
-  - [List of Testnet API](#list-of-testnet-api-endpoints)
+  - [List of Mainnet API Endpoints](#list-of-mainnet-api-endpoints)
+  - [List of Testnet API Endpoints](#list-of-testnet-api-endpoints)
 - [SDKs](#sdks)
 
 ## About XPX
